@@ -1,4 +1,4 @@
-public class ManualPattern {
+public class ManualPattern1 {
     public static void main(String[] args) {
 
         //outer loop traverse starts with 5 and decreases by 1 each time
