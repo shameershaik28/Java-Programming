@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ProblemWithYoungerBrother {
+public class FindTheRemainder {
     public void remainderResult(int N1, int N2, int N3)
     {
         if (N1 >= 0 && N1 <= 10000000 && N2 >= 0 && N2 <= 10000000 && N3 >= 1 && N3 <= 10000000)
@@ -17,7 +17,7 @@ public class ProblemWithYoungerBrother {
         int Number2=sc.nextInt();
         int Number3=sc.nextInt();
 
-        ProblemWithYoungerBrother p = new ProblemWithYoungerBrother();
+        FindTheRemainder p = new FindTheRemainder();
         p.remainderResult(Number1, Number2, Number3); // pass the arguments to the function
     }
 }
