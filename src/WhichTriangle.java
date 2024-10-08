@@ -14,7 +14,6 @@ public class WhichTriangle {
             return;
         }
 
-
         if(A==B && A==C)
         {
             System.out.println("equilateral");
