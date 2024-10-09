@@ -6,7 +6,7 @@ public class MultiplesOfFour {
 
         int N = sc.nextInt();
 
-        // Edge case: N should be between 1 and 1000000
+        // Edge case: N should be between 1 and 10000
         if(N==0 || N >10000)
         {
             return;
