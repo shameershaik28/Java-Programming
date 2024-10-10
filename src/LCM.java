@@ -6,16 +6,17 @@ public class LCM {
         int A = sc.nextInt();
         int B = sc.nextInt();
 
-        int LCM = Math.max(A, B);
+        if (A >= 1 && A <= 200 && B >= 1 && B <= 200) {
+            int LCM = Math.max(A, B);
 
-        while(true)
-        {
-            if(LCM%A==0 && LCM%B==0)
-            {
-                System.out.println(LCM);
-                break;
+
+            while (true) {
+                if (LCM % A == 0 && LCM % B == 0) {
+                    System.out.println(LCM);
+                    break;
+                }
+                LCM++;
             }
-            LCM++;
         }
     }
 }
