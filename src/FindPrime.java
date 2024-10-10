@@ -4,26 +4,23 @@ public class FindPrime {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
-
-        if(N==0)
+        if(N<=1)
         {
             return;
         }
-        int count = 0;
-        for(int i=1; i<=N ; i++)
-        {
-            if (N % i == 0 ) {
 
-                count= count+1;
+        Boolean isPrime= true;
+        for (int i = 2; i * i <= N; i++) {
+            // if we find any divisors between i*i <=36 its not a prime
+            if (N % i == 0) {
+                isPrime = false;
+                break;
             }
         }
-        if(count==2)
-        {
-            System.out.println("Prime number");
+        if (isPrime) {
+            System.out.println("Prime");
+        } else {
+            System.out.println("Not Prime");
         }
-        else {
-            System.out.println("Not Prime number");
-        }
-
     }
-}
+    }
