@@ -5,6 +5,11 @@ public class HollowInvertedPyramidPattern {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
 
+        if(N<2 || N>100)
+        {
+            return;
+        }
+
         //This is iterate for N times
         for(int i=1; i<=N; i++)
         {
