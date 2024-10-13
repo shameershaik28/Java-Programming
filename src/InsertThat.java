@@ -6,6 +6,10 @@ public class InsertThat {
 
         // Reading the size of the array
         int N = sc.nextInt();
+        if(N<1|| N>100)
+        {
+            return;
+        }
         int[] arr = new int[N + 1];  // Create an array of size N+1
 
         // Reading the elements of the array
