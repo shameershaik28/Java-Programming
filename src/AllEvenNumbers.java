@@ -25,13 +25,7 @@ public class AllEvenNumbers {
       for(int i = 0; i < N; i++){
          A.add(sc.nextInt());
       }
-      ArrayList<Integer> B = new ArrayList<>();
 
-      for(int i = 0; i < N; i++){
-         if(A.get(i) % 2 == 0){
-            B.add(A.get(i));
-         }
-      }
       AllEvenNumbers obj = new AllEvenNumbers();
       System.out.println(obj.solve(A));
 
