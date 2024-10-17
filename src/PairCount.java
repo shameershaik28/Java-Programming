@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class PairCount {
@@ -5,30 +6,30 @@ public class PairCount {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the size of the array: ");
         int N = sc.nextInt();
-        System.out.println("Enter the value of the array: ");
+        System.out.println("Enter the Integer B: ");
         int B = sc.nextInt();
 
 
-        int[] arr = new int[N];
+        ArrayList<Integer> A = new ArrayList<Integer>();
 
-        System.out.println("Enter the elements of the array: ");
-        for(int i = 0; i < N; i++)
+       System.out.println("Enter the elements in the array: ");
+        for(int i=0; i<N ; i++)
         {
-            arr[i] = sc.nextInt();
+            A.add(sc.nextInt());
         }
-
-        int count = 0;
-        for(int i = 0; i < N; i++)
+        int count =0;
+        for(int i=0; i<N ; i++)
         {
-            for(int j= 0; j < N; j++)
+
+            for(int j=i+1; j<N; j++)
             {
-                if(arr[i]+arr[j] == B && i!=j)
+                if(A.get(i)+A.get(j)==B)
                 {
                     count++;
                 }
             }
         }
-        System.out.println(count/2);
-
+        System.out.println("The total count values which are equalss to B are : "+ count);
     }
 }
+
