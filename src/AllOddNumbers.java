@@ -9,7 +9,7 @@ public class AllOddNumbers {
         ArrayList<Integer> B = new ArrayList<>();
 
         for(int i = 0; i < N; i++){
-            if(A.get(i) % 2 == 0){
+            if(A.get(i) % 2 != 0){
                 B.add(A.get(i));
             }
         }
