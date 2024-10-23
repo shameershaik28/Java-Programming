@@ -2,36 +2,40 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class MatrixTranspose {
-    public int[][] solve(int[][] A) {
-        int N = A.length;
-        int M = A[0].length;
+    // Method to transpose in place for square matrices
+    public void transposeInPlace(int[][] A) {
+        int N = A.length;  // Assuming square matrix, so N == M
 
-        int[][] ans = new int[M][N];
-
-        for(int i=0; i<N; i++)
-        {
-            for(int j=0; j<M; j++)
-            {
-                ans[j][i] = A[i][j];
+        // Swap elements across the diagonal
+        for (int i = 0; i < N; i++) {
+            for (int j = i + 1; j < N; j++) {
+                // Swap A[i][j] and A[j][i]
+                int temp = A[i][j];
+                A[i][j] = A[j][i];
+                A[j][i] = temp;
             }
         }
-
-        return ans;
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of rows: ");
         int N = sc.nextInt();
-        int M = sc.nextInt();
 
-        int[][] A = new int[N][M];
+        // This assumes it's a square matrix (N x N)
+        int[][] A = new int[N][N];
 
+        System.out.println("Enter the elements: ");
         for (int i = 0; i < N; i++) {
-            for (int j = 0; j < M; j++) {
+            for (int j = 0; j < N; j++) {
                 A[i][j] = sc.nextInt();
             }
         }
 
         MatrixTranspose mt = new MatrixTranspose();
-        System.out.println(Arrays.deepToString(mt.solve(A)));
+        mt.transposeInPlace(A);  // Transpose the matrix in place
+
+        // Print the transposed matrix
+        System.out.println(Arrays.deepToString(A));
     }
 }
