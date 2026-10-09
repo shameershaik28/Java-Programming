@@ -19,24 +19,29 @@ A proper divisor divides a number without leaving any remainder.
 public class IsItPerfect {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();
+        int T = sc.nextInt();
 
-
-        for(int i=1; i<=N; i++)
+        for(int i=0; i<T; i++)
         {
-            int count  = 0;
-            for(int j=1; j<=N; j++)
+            int N = sc.nextInt();
+            int sum = 0;
+
+            for(int j=1; j<N; j++)
             {
-                if(i % j == 0)
+                if(N % j == 0)
                 {
-                    count++;
+                    sum += j;
                 }
             }
-
-            if(count == 2)
+            if(sum == N)
             {
-                System.out.println(i);
+                System.out.println("YES");
             }
+            else
+            {
+                System.out.println("NO");
+            }
+
         }
     }
 }
