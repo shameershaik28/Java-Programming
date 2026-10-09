@@ -17,35 +17,26 @@ of its proper positive divisors, excluding the number itself.
 A proper divisor divides a number without leaving any remainder.
 */
 public class IsItPerfect {
-    // YOUR CODE GOES HERE
-    // Please take input and print output to standard input/output (stdin/stdout)
-    // DO NOT USE ARGUMENTS FOR INPUTS
-    // E.g. 'Scanner' for input & 'System.out' for output
-    Scanner sc = new Scanner(System.in);
-    int T = sc.nextInt();
-
-
-
-        for(int i=0; i<T; i++)
-    {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
-        int sum = 0;
 
-        for(int j=1; j<N; j++)
+
+        for(int i=1; i<=N; i++)
         {
-            if(N % j == 0)
+            int count  = 0;
+            for(int j=1; j<=N; j++)
             {
-                sum += j;
+                if(i % j == 0)
+                {
+                    count++;
+                }
+            }
+
+            if(count == 2)
+            {
+                System.out.println(i);
             }
         }
-        if(sum == N)
-        {
-            System.out.println("YES");
-        }
-        else
-        {
-            System.out.println("NO");
-        }
-
     }
 }
