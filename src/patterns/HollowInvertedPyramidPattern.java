@@ -1,4 +1,7 @@
 package patterns;
+
+import java.util.Scanner;
+
 /*
 Problem: Hollow Inverted Pyramid Pattern
 
